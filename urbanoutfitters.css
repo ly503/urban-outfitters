@@ -684,8 +684,18 @@ footer ul li a:hover {
 		width: 90%;
 	}
 
+	.hero {
+		margin: 0;
+		padding: 0;
+	}
+
 	.hero-title-box h1 {
 		margin-top: 5px;
+	}
+
+	.hero-2 {
+		margin: 0;
+		padding: 0;
 	}
 
 	.hero-2 a {
@@ -699,14 +709,16 @@ footer ul li a:hover {
 
 	.womens {
 		margin: 0;
+		padding: 0;
 	}
 
 	.womens .col-1 {
 		width: 100%;
+	/*	height: 375px;*/
 		float: none;
 		background-size: contain;
 		background-repeat: no-repeat;
-		margin-bottom: 20px;
+		margin: 0;
 	}
 
 	.womens .col-1 a {
@@ -731,9 +743,15 @@ footer ul li a:hover {
 	.womens-bottom-banner {
 		width: 100%;
 		height: 500px;
+		margin: 0;
+		padding: 0;
 		background-image: url('images/womens-bottom-banner-mobile.png');
 		background-size: contain;
 		background-repeat: no-repeat;
+	}
+
+	.mens {
+		margin: 0;
 	}
 
 	.mens .col-1 {
@@ -743,6 +761,7 @@ footer ul li a:hover {
 		float: none;
 		margin-bottom: 20px;
 		padding: 0;
+		margin: 0;
 	}
 
 	.mens .col-1 a {
@@ -756,6 +775,7 @@ footer ul li a:hover {
 		background-repeat: no-repeat;
 		float: none;
 		margin: 0;
+		padding: 0;
 	}
 
 	.mens .col-2 a {
@@ -766,13 +786,43 @@ footer ul li a:hover {
 	.bottom-banner {
 		width: 100%;
 		height: 250px;
+		margin: 0;
+		padding: 0;
 		background-image: url('images/bottom-banner-mobile.png');
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
 
-	footer {
+	footer li {
+		display: none;
+	}
 
+	footer h4 {
+		width: 100%;
+	}
+
+	footer .footer-col-1 {
+		width: 100%;
+		float: none;
+	}
+
+	footer .footer-col-2 {
+		width: 100%;
+		float: none;
+	}
+
+	footer .footer-col-3 {
+		width: 100%;
+		float: none;
+	}
+
+	footer .footer-col-4 {
+		width: 100%;
+		float: none;
+	}
+
+	footer .footer-col-5 {
+		width: 100%;
 	}
 
 }
