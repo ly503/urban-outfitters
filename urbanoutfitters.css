@@ -1,0 +1,777 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: arial;
+}
+
+.clearfix {
+	clear: both;
+}
+
+
+/*header*/
+
+header {
+	padding-bottom: 30px;
+}
+
+/*promo bar*/
+
+.promo-bar {
+	width: 100%;
+	height: 50px;
+	background-color: #71F9DC;
+}
+
+.promo-bar ul {
+	list-style-type: none;
+	text-align: center;
+}
+
+.promo-bar ul li {
+	display: inline-block;
+	margin: 10px;
+}
+
+.promo-bar ul li.title {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.promo-bar a {
+	text-decoration: none;
+	color: white;
+}
+
+/*primary navigation*/
+
+.mobile-left-nav {
+	display: none;
+}
+
+.mobile-right-nav {
+	display: none;
+}
+
+.nav {
+	width: 100%;
+	height: 50px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	position: fixed;
+	z-index: 5;
+	background-color: white;
+	border-bottom: 1px solid lightgrey;
+}
+
+.nav ul {
+	list-style-type: none;
+}
+
+.nav ul.left-nav {
+	float: left;
+	width: 20%;
+}
+
+.nav ul.left-nav li.title {
+	font-weight: bold;
+	margin-left: 5px;
+}
+
+.nav ul.center-nav {
+	float: left;
+	width: 60%;
+	text-align: center;
+	font-size: 14px;
+}
+
+.nav ul.center-nav li{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.nav ul.right-nav {
+	float: left;
+	width: 20%;
+	text-align: right;
+	font-size: 14px;
+}
+
+.nav ul.right-nav li{
+	display: inline-block;
+	margin-right: 5px;
+}
+
+/*sections*/
+
+.section-wrap {
+	width: 1150px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+
+/*section 1*/
+
+.hero {
+	width: 100%;
+	height: 180px;
+	background-image: url("images/UO-hero-img.jpg");
+	background-size: cover;
+	position: relative;
+}
+
+.hero:hover {
+	opacity: .8;
+	cursor: pointer;
+}
+
+.left-hero-text {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	color: white;
+	font-size: 16px;
+}
+
+.hero-title-box {
+	width: 33.333%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 33.333%;
+	color: white;
+	font-size: 22px;
+}
+
+.hero-title-box h1 {
+	margin-top: 90px;
+	text-align: center;
+}
+
+.hero-title-box a {
+	text-decoration: none;
+	width: 100px;
+	height: 50px;
+	padding: 5px;
+	background-color: white;
+	color: rgba(0, 0, 0, .9);
+	font-size: 16px;
+	margin: 5px;
+	position: relative;
+
+}
+
+.hero-title-box a:hover {
+	opacity: .8;
+	cursor: pointer;
+}
+
+.right-hero-text {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	color: white;
+	font-size: 16px;
+}
+
+/*section 2*/
+
+.hero-2 {
+	width: 100%;
+	height: 400px;
+	margin-top: 30px;
+	background-image: url('images/urban-pants-hero.jpg');
+	position: relative;
+}
+
+.hero-2:hover {
+	opacity: .8;
+	cursor: pointer;
+}
+
+.hero-2 a {
+	width: 120px;
+	height: 30px;
+	background-color: white;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	padding: 5px;
+	text-decoration: none;
+	margin-left: -60px;
+	text-align: center;
+	color: rgba(0, 0, 0, .9);
+}
+
+.hero-2 a:hover {
+	opacity: .9;
+}
+
+/*section 3*/
+
+.section-3 {
+	width: 100%;
+	margin-top: 30px;
+	position: relative;
+}
+
+
+.section-3 .col-1 {
+	width: 33.333%;
+	height: 300px;
+	float: left;
+	background-image: url('images/backpacks.jpg');
+	background-size: cover;
+}
+
+.section-3 .col-1:hover {
+	opacity: .8;
+	cursor: pointer;
+}
+
+.section-3 a {
+	width: 100%;
+	height: 40px;
+	background-color: white;
+	padding: 5px;
+	font-size: 16px;
+	position: relative;
+	top: 85%;
+	left: 35%;
+	text-decoration: none;
+	color: rgba(0, 0, 0, .9);
+}
+
+.section-3 a:hover {
+	opacity: .9;
+	cursor: pointer;
+}
+
+.section-3 .col-2 {
+	width: calc(33.333% - 15px);
+	height: 300px;
+	margin-left: 15px;
+	float: left;
+	background-image: url('images/jackets.jpg');
+	background-size: cover;
+}
+
+.section-3 .col-2:hover {
+	opacity: .8;
+	cursor: pointer;
+}
+
+.section-3 .col-3 {
+	width: calc(33.333% - 15px);
+	height: 300px;
+	margin-left: 15px;
+	float: left;
+	background-image: url('images/shirts.jpeg');
+	background-size: cover;
+
+}
+
+.section-3 .col-3:hover {
+	opacity: .8;
+	cursor: pointer;
+}
+
+
+/*section 4 (womens)*/
+
+.womens {
+	width: 100%;
+	margin-top: 30px;
+	position: relative;
+}
+
+.womens-header hr {
+	color: grey;
+	margin-bottom: 15px;
+}
+
+.womens-header h1 {
+	text-align: center;
+} 
+
+.womens-header a {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: grey;
+}
+
+.womens-column-wrap {
+	width: 100%;
+	position: relative;
+}
+
+.womens .col-1 {
+	width: calc(50% - 15px);
+	height: 500px;
+	margin-right: 15px;
+	background-image: url('images/shoes.jpeg');
+	background-size: cover;
+	float: left;
+}
+
+.womens .col-1:hover {
+	opacity: .9;
+	cursor: pointer;
+}
+
+.womens .col-1 a {
+	width: 100px;
+	height: 30px;
+	font-size: 14px;
+	text-decoration: none;
+	text-align: center;
+	color: rgba(0, 0, 0, .9);
+	background-color: white;
+	padding: 5px;
+	position: absolute;
+	bottom: 10px;
+	left: 20%;
+}
+
+.womens .col-1 a:hover {
+	opacity: .9;
+	cursor: pointer;
+}
+
+.womens .col-2 {
+	width: calc(50% - 15px);
+	height: 500px;
+	margin-left: 15px;
+	background-image: url('images/womens-collection.jpg');
+	background-size: cover;
+	float: left;
+}
+
+.womens .col-2:hover {
+	opacity: .9;
+	cursor: pointer;
+}
+
+.womens .col-2 a {
+	width: 150px;
+	height: 30px;
+	font-size: 14px;
+	text-align: center;
+	text-decoration: none;
+	color: rgba(0, 0, 0, .9);
+	background-color: white;
+	padding: 5px;
+	position: absolute;
+	bottom: 10px;
+	right: 20%;
+}
+
+.womens .col-2 a:hover {
+	opacity: .9;
+	cursor: pointer;
+}
+
+.womens-bottom-banner {
+	margin-top: 30px;
+	width: 100%;
+	height: 200px;
+	background-image: url('images/womens-bottom-banner.png');
+}
+
+.womens-bottom-banner:hover {
+	opacity: .9;
+	cursor: pointer;
+}
+
+/*section 5 (mens)*/
+.mens {
+	width: 100%;
+	margin-top: 30px;
+	position: relative;
+}
+
+.mens-header h1 {
+	text-align: center;
+}
+
+.mens-header a {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: grey;
+}
+
+.mens-header hr {
+	color: grey;
+	margin-bottom: 15px;
+}
+
+.mens .col-1 {
+	width: calc(50% - 15px);
+	height: 500px;
+	margin-right: 15px;
+	float: left;
+	background-image: url('images/mens-jackets.jpg');
+	background-size: cover;
+}
+
+.mens .col-1:hover {
+	opacity: .9;
+	cursor: pointer;
+}
+
+.mens .col-1 a {
+	width: 120px;
+	height: 30px;
+	font-size: 14px;
+	text-decoration: none;
+	background-color: white;
+	padding: 10px;
+	position: absolute;
+	bottom: 20px;
+	left: 20%;
+	text-align: center;
+	color: rgba(0, 0, 0, .9);
+}
+
+.mens .col-1 a:hover {
+	opacity: 9;
+	cursor: pointer;
+}
+
+.mens .col-2 {
+	width: calc(50% - 15px);
+	height: 500px;
+	margin-left: 15px;
+	float: left;
+	background-image: url('images/mens-graphic-tees.jpg');
+	background-size: cover;
+}
+
+.mens .col-2:hover {
+	opacity: .9;
+	cursor: pointer;
+}
+
+.mens .col-2 a {
+	width: 120px;
+	height: 30px;
+	font-size: 14px;
+	text-decoration: none;
+	color: grey;
+	background-color: white;
+	padding: 10px;
+	position: absolute;
+	bottom: 20px;
+	right: 20%;
+	text-align: center;
+	color: rgba(0, 0, 0, .9);
+}
+
+.mens .col-2 a:hover {
+	opacity: 9;
+	cursor: pointer;
+}
+
+/*bottom banner (skip apartments)*/
+
+.bottom-banner {
+	width: 100%;
+	height: 100px;
+	margin-top: 30px;
+	background-image: url('images/bottom-banner.png');
+	background-size: cover;
+}
+
+.bottom-banner:hover {
+	opacity: .9;
+	cursor: pointer;
+}
+
+/*collections*/
+
+
+/*footer*/
+
+footer {
+	width: 100%;
+	height: 400px;
+	margin-top: 50px;
+	background-color: #F5F5F5;
+	position: relative;
+	font-size: 14px;
+}
+
+footer .footer-title {
+	color: rgba(0, 0, 0, .9);
+	border-bottom: 1px solid grey;
+}
+
+footer .footer-col-1 {
+	padding: 10px;
+	width: calc(15% - 15px);
+	margin-right: 15px;
+	float: left;
+}
+
+footer .footer-col-2 {
+	padding: 10px;
+	width: calc(15% - 15px);
+	margin-right: 15px;
+	float: left;
+}
+
+footer .footer-col-3 {
+	padding: 10px;
+	width: calc(15% - 15px);
+	margin-right: 15px;
+	float: left;
+}
+
+footer .footer-col-4 {
+	padding: 10px;
+	width: calc(20% - 15px);
+	margin-right: 15px;
+	float: left;
+}
+
+footer .footer-col-5 {
+	padding: 10px;
+	width: 35%;
+	float: left;
+}
+
+.footer-col-5 ul.social-icons {
+	padding-top: 10px;
+}
+
+.footer-col-5 ul.social-icons li {
+	display: inline;
+	margin: 0;
+}
+
+.footer-col-5 ul.social-icons img {
+	width: 30px;
+	height: 30px;
+}
+
+.footer-col-5 ul.social-icons a:hover {
+	opacity: .8;
+	cursor: pointer;
+}
+
+
+footer ul li {
+	list-style-type: none;
+	margin: 10px;
+}
+
+footer ul li a {
+	text-decoration: none;
+	color: #a9a9a9;
+}
+
+footer ul li a:hover {
+	text-decoration: underline;
+}
+
+.footer-wrap {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+.copyright {
+	font-size: 12px;
+	color: grey;
+}
+
+.copyright ul li {
+	list-style-type: none;
+	display: inline;
+}
+
+.copyright .copyright-left {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.copyright .copyright-right {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+
+/*tablet styles*/
+
+@media all and (max-width: 989px) {
+	.promo-bar {
+		display: none;
+	}
+
+	.nav {
+		width: 100%;
+	}
+
+	.nav ul.left-nav {
+		text-align: center;
+		margin: 0 auto;
+		float: none;
+		width: 100%;
+	}
+
+	.nav ul.mobile-left-nav {
+		display: inline;
+		float: left;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+
+	.nav ul.center-nav {
+		display: none;
+	}
+
+	.nav ul.right-nav {
+		display: none;
+	}
+
+	.nav ul.mobile-right-nav {
+		display: inline;
+		float: right;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	.nav ul.mobile-right-nav li {
+		display: inline;
+		margin-right: 15px;
+	}
+
+	.section-wrap {
+		width: 90%;
+	}
+
+	.hero-2 {
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	
+	.womens-bottom-banner {
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	.bottom-banner {
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+}
+
+/*mobile styles*/
+@media all and (max-width: 760px) {
+	.section-wrap {
+		width: 90%;
+	}
+
+	.hero-title-box h1 {
+		margin-top: 5px;
+	}
+
+	.hero-2 a {
+		top: 30%;
+		left: 50%;
+	}
+
+	.section-3 {
+		display: none;
+	}
+
+	.womens {
+		margin: 0;
+	}
+
+	.womens .col-1 {
+		width: 100%;
+		float: none;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-bottom: 20px;
+	}
+
+	.womens .col-1 a {
+		top: 20%;
+		left: 30%;
+	}
+
+	.womens .col-2 {
+		width: 100%;
+		float: none;
+		background-size: contain;
+		background-repeat: no-repeat;
+		padding: 0;
+		margin: 0;
+	}
+
+	.womens .col-2 a {
+		bottom: 20%;
+		left: 30%;
+	}
+
+	.womens-bottom-banner {
+		width: 100%;
+		height: 500px;
+		background-image: url('images/womens-bottom-banner-mobile.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	.mens .col-1 {
+		width: 100%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		float: none;
+		margin-bottom: 20px;
+		padding: 0;
+	}
+
+	.mens .col-1 a {
+		top: 30%;
+		left: 30%;
+	}
+
+	.mens .col-2 {
+		width: 100%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		float: none;
+		margin: 0;
+	}
+
+	.mens .col-2 a {
+		bottom: 20%;
+		left: 30%;
+	}
+
+	.bottom-banner {
+		width: 100%;
+		height: 250px;
+		background-image: url('images/bottom-banner-mobile.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+
+}
+
+
