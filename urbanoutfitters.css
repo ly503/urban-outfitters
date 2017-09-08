@@ -56,6 +56,10 @@ header {
 	display: none;
 }
 
+.mobile-center-nav {
+	display: none;
+}
+
 .mobile-right-nav {
 	display: none;
 }
@@ -132,7 +136,8 @@ header {
 	position: relative;
 }
 
-.hero:hover {
+.hero:hover,
+.hero-title-box a:hover {
 	opacity: .8;
 	cursor: pointer;
 }
@@ -177,11 +182,6 @@ header {
 
 }
 
-.hero-title-box a:hover {
-	opacity: .8;
-	cursor: pointer;
-}
-
 .right-hero-text {
 	position: absolute;
 	bottom: 10px;
@@ -200,7 +200,8 @@ header {
 	position: relative;
 }
 
-.hero-2:hover {
+.hero-2:hover,
+.hero-2 a:hover {
 	opacity: .8;
 	cursor: pointer;
 }
@@ -217,10 +218,6 @@ header {
 	margin-left: -60px;
 	text-align: center;
 	color: rgba(0, 0, 0, .9);
-}
-
-.hero-2 a:hover {
-	opacity: .9;
 }
 
 /*section 3*/
@@ -347,8 +344,8 @@ header {
 	background-position: center;
 }
 
-.womens .womens-column-wrap .col-1 .womens-button-wrap a,
-.womens .womens-column-wrap .col-2 .womens-button-wrap a {
+.womens .womens-column-wrap .col-1 a,
+.womens .womens-column-wrap .col-2 a {
 	width: 150px;
 	height: 30px;
 	font-size: 14px;
@@ -363,8 +360,8 @@ header {
 	margin-left: -75px;
 }
 
-.womens .womens-column-wrap .col-1 .womens-button-wrap a:hover,
-.womens .womens-column-wrap .col-2 .womens-button-wrap a:hover {
+.womens .womens-column-wrap .col-1 a:hover,
+.womens .womens-column-wrap .col-2 a:hover {
 	opacity: .9;
 	cursor: pointer;
 }
@@ -452,13 +449,7 @@ header {
 	line-height: 30px;
 }
 
-.mens .col-1 a {
-	position: absolute;
-	bottom: 20px;
-	left: 50%;
-	margin-left: -75px;
-}
-
+.mens .col-1 a,
 .mens .col-2 a {
 	position: absolute;
 	bottom: 20px;
@@ -505,20 +496,8 @@ footer .footer-title {
 	border-bottom: 1px solid grey;
 }
 
-footer .footer-col-1 {
-	padding: 10px;
-	width: calc(15% - 15px);
-	margin-right: 15px;
-	float: left;
-}
-
-footer .footer-col-2 {
-	padding: 10px;
-	width: calc(15% - 15px);
-	margin-right: 15px;
-	float: left;
-}
-
+footer .footer-col-1,
+footer .footer-col-2,
 footer .footer-col-3 {
 	padding: 10px;
 	width: calc(15% - 15px);
@@ -625,16 +604,8 @@ footer ul li a:hover {
 		left: 0;
 	}
 
-	.nav ul.left-nav {
-		text-align: center;
-		margin: 0 auto;
-		float: none;
-		width: 60%;
-	}
-
-	.nav ul.mobile-left-nav {
-		display: block;
-		float: left;
+	.nav .left-nav {
+		display: none;
 	}
 
 	.nav ul.center-nav {
@@ -645,6 +616,23 @@ footer ul li a:hover {
 		display: none;
 	}
 
+	.nav ul.mobile-left-nav {
+		width: calc(33.333% - 5px);
+		display: block;
+		float: left;
+		margin-left: 5px;
+	}
+
+	.nav ul.mobile-center-nav {
+		display: block;
+		font-weight: bold;
+		font-size: 25px;
+		width: 33.333%;
+		text-align: center;
+		margin: 0 auto;
+		float: left;
+	}
+
 	.nav ul.mobile-right-nav {
 		display: block;
 		float: right;
@@ -652,7 +640,7 @@ footer ul li a:hover {
 
 	.nav ul.mobile-right-nav li {
 		display: inline-block;
-		margin-right: 15px;
+		margin-right: 10px;
 	}
 
 	.section-wrap {
@@ -665,16 +653,11 @@ footer ul li a:hover {
 		background-repeat: no-repeat;
 	}
 	
-	.womens-bottom-banner {
-		background-size: contain;
-		background-repeat: no-repeat;
-	}
-
+	.womens-bottom-banner,
 	.bottom-banner {
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
-
 }
 
 /*mobile styles*/
@@ -697,10 +680,7 @@ footer ul li a:hover {
 		margin-top: 0;
 	}
 
-	.left-hero-text {
-		font-size: 12px;
-	}
-
+	.left-hero-text,
 	.right-hero-text {
 		font-size: 12px;
 	}
@@ -735,7 +715,8 @@ footer ul li a:hover {
 		margin-bottom: 10px;
 	}
 
-	.womens .col-1 a {
+	.womens .col-1 a,
+	.womens .col-2 a {
 		top: 50%;
 		left: 50%;
 	}
@@ -748,11 +729,6 @@ footer ul li a:hover {
 		padding: 0;
 		margin-bottom: 10px;
 		margin-left: 0;
-	}
-
-	.womens .col-2 a {
-		top: 50%;
-		left: 50%;
 	}
 
 	.womens-bottom-banner {
@@ -826,37 +802,20 @@ footer ul li a:hover {
 		width: 100%;
 	}
 
-	footer .footer-col-1 {
-		width: 100%;
-		float: none;
-	}
-
-	footer .footer-col-2 {
-		width: 100%;
-		float: none;
-	}
-
-	footer .footer-col-3 {
-		width: 100%;
-		float: none;
-	}
-
-	footer .footer-col-4 {
-		width: 100%;
-		float: none;
-	}
-
+	footer .footer-col-1,
+	footer .footer-col-2,
+	footer .footer-col-3,
+	footer .footer-col-4,
 	footer .footer-col-5 {
 		width: 100%;
+		float: none;
 	}
 
-	footer .copyright-left {
-		width: 100%;
-	}
-
+	footer .copyright-left,
 	footer .copyright-right {
 		width: 100%;
 	}
+
 }
 
 
