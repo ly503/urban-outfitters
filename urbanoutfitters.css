@@ -1,3 +1,6 @@
+/*background-position: center center;*/
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -63,6 +66,10 @@ header {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	position: fixed;
+/*	remember:
+	top + left values*/
+	top: 50px;
+	left: 0;
 	z-index: 5;
 	background-color: white;
 	border-bottom: 1px solid lightgrey;
@@ -149,20 +156,24 @@ header {
 }
 
 .hero-title-box h1 {
-	margin-top: 90px;
+	margin-top: 60px;
+	text-align: center;
+}
+
+.hero-title-box .button-wrap {
 	text-align: center;
 }
 
 .hero-title-box a {
+	display: inline-block;
 	text-decoration: none;
 	width: 100px;
-	height: 50px;
-	padding: 5px;
+	height: 25px;
+	line-height: 25px;
 	background-color: white;
 	color: rgba(0, 0, 0, .9);
 	font-size: 16px;
 	margin: 5px;
-	position: relative;
 
 }
 
@@ -215,72 +226,65 @@ header {
 /*section 3*/
 
 .section-3 {
-	width: 100%;
 	margin-top: 30px;
 	position: relative;
 }
 
-
-.section-3 .col-1 {
-	width: 33.333%;
-	height: 300px;
-	float: left;
-	background-image: url('images/backpacks.jpg');
-	background-size: cover;
-}
-
-.section-3 .col-1:hover {
-	opacity: .8;
-	cursor: pointer;
-}
-
-.section-3 a {
-	width: 100%;
-	height: 40px;
-	background-color: white;
-	padding: 5px;
-	font-size: 16px;
-	position: relative;
-	top: 85%;
-	left: 35%;
-	text-decoration: none;
-	color: rgba(0, 0, 0, .9);
-}
-
-.section-3 a:hover {
-	opacity: .9;
-	cursor: pointer;
-}
-
-.section-3 .col-2 {
-	width: calc(33.333% - 15px);
-	height: 300px;
-	margin-left: 15px;
-	float: left;
-	background-image: url('images/jackets.jpg');
-	background-size: cover;
-}
-
-.section-3 .col-2:hover {
-	opacity: .8;
-	cursor: pointer;
-}
-
+.section-3 .col-1,
+.section-3 .col-2,
 .section-3 .col-3 {
+	position: relative;
+	float: left;
 	width: calc(33.333% - 15px);
 	height: 300px;
-	margin-left: 15px;
-	float: left;
-	background-image: url('images/shirts.jpeg');
+	margin: 0 7.5px;
 	background-size: cover;
-
+	background-position: center;
 }
 
+.section-3 .col-1:hover,
+.section-3 .col-2:hover,
 .section-3 .col-3:hover {
 	opacity: .8;
 	cursor: pointer;
 }
 
+.section-3 .col-1 {
+	background-image: url('images/backpacks.jpg');
+}
+
+.section-3 .col-2 {
+	background-image: url('images/jackets.jpg');
+}
+
+.section-3 .col-3 {
+	background-image: url('images/shirts.jpeg');
+}
+
+.section-3 a {
+	display: block;
+	width: 100%;
+}
+
+.section-3 .section-3-button a {
+	width: 150px;
+	height: 30px;
+	text-align: center;
+	background-color: white;
+	line-height: 30px;
+	font-size: 16px;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -75px;
+	text-decoration: none;
+	color: rgba(0, 0, 0, .9);
+}
+
+.section-3 .section-3-button a:hover {
+	opacity: .8;
+	cursor: pointer;
+}
 
 /*section 4 (womens)*/
 
@@ -311,68 +315,56 @@ header {
 	position: relative;
 }
 
-.womens .col-1 {
-	width: calc(50% - 15px);
-	height: 500px;
-	margin-right: 15px;
-	background-image: url('images/shoes.jpeg');
-	background-size: cover;
-	float: left;
+.womens .womens-column-wrap a {
+	display: block;
+	width: 100%;
 }
 
-.womens .col-1:hover {
-	opacity: .9;
-	cursor: pointer;
-}
-
-.womens .col-1 a {
-	width: 100px;
-	height: 30px;
-	font-size: 14px;
-	text-decoration: none;
-	text-align: center;
-	color: rgba(0, 0, 0, .9);
-	background-color: white;
-	padding: 5px;
-	position: absolute;
-	bottom: 10px;
-	left: 20%;
-}
-
-.womens .col-1 a:hover {
-	opacity: .9;
-	cursor: pointer;
-}
-
+.womens .col-1,
 .womens .col-2 {
+	position: relative;
+	float: left;
 	width: calc(50% - 15px);
 	height: 500px;
-	margin-left: 15px;
-	background-image: url('images/womens-collection.jpg');
-	background-size: cover;
-	float: left;
+	margin: 0 7.5px;
 }
 
+.womens .col-1:hover,
 .womens .col-2:hover {
 	opacity: .9;
 	cursor: pointer;
 }
 
-.womens .col-2 a {
+.womens .col-1 {
+	background-image: url('images/shoes.jpeg');
+	background-size: cover;
+	background-position: center;
+}
+
+.womens .col-2 {
+	background-image: url('images/womens-collection.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.womens .womens-column-wrap .col-1 .womens-button-wrap a,
+.womens .womens-column-wrap .col-2 .womens-button-wrap a {
 	width: 150px;
 	height: 30px;
 	font-size: 14px;
-	text-align: center;
 	text-decoration: none;
+	text-align: center;
+	line-height: 30px;
 	color: rgba(0, 0, 0, .9);
 	background-color: white;
-	padding: 5px;
 	position: absolute;
-	bottom: 10px;
-	right: 20%;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -75px;
 }
 
-.womens .col-2 a:hover {
+.womens .womens-column-wrap .col-1 .womens-button-wrap a:hover,
+.womens .womens-column-wrap .col-2 .womens-button-wrap a:hover {
 	opacity: .9;
 	cursor: pointer;
 }
@@ -382,6 +374,7 @@ header {
 	width: 100%;
 	height: 200px;
 	background-image: url('images/womens-bottom-banner.png');
+	background-position: center;
 }
 
 .womens-bottom-banner:hover {
@@ -412,68 +405,68 @@ header {
 	margin-bottom: 15px;
 }
 
-.mens .col-1 {
+.mens-column-wrap {
+	width: 100%;
+	position: relative;
+}
+
+.mens-column-wrap a {
+	display: block;
+	width: 100%;
+}
+
+.mens .col-1,
+.mens .col-2 {
+	position: relative;
 	width: calc(50% - 15px);
 	height: 500px;
-	margin-right: 15px;
+	margin: 0 7.5px;
 	float: left;
-	background-image: url('images/mens-jackets.jpg');
 	background-size: cover;
+	background-position: center;
 }
 
-.mens .col-1:hover {
-	opacity: .9;
-	cursor: pointer;
-}
-
-.mens .col-1 a {
-	width: 120px;
-	height: 30px;
-	font-size: 14px;
-	text-decoration: none;
-	background-color: white;
-	padding: 10px;
-	position: absolute;
-	bottom: 20px;
-	left: 20%;
-	text-align: center;
-	color: rgba(0, 0, 0, .9);
-}
-
-.mens .col-1 a:hover {
-	opacity: 9;
-	cursor: pointer;
+.mens .col-1 {
+	background-image: url('images/mens-jackets.jpg');
 }
 
 .mens .col-2 {
-	width: calc(50% - 15px);
-	height: 500px;
-	margin-left: 15px;
-	float: left;
 	background-image: url('images/mens-graphic-tees.jpg');
-	background-size: cover;
 }
 
+.mens .col-1:hover,
 .mens .col-2:hover {
 	opacity: .9;
 	cursor: pointer;
 }
 
+.mens .col-1 a,
 .mens .col-2 a {
-	width: 120px;
+	width: 150px;
 	height: 30px;
 	font-size: 14px;
 	text-decoration: none;
-	color: grey;
 	background-color: white;
-	padding: 10px;
-	position: absolute;
-	bottom: 20px;
-	right: 20%;
 	text-align: center;
 	color: rgba(0, 0, 0, .9);
+	line-height: 30px;
 }
 
+.mens .col-1 a {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -75px;
+}
+
+.mens .col-2 a {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -75px;
+}
+
+.mens .col-1 a:hover,
 .mens .col-2 a:hover {
 	opacity: 9;
 	cursor: pointer;
@@ -487,14 +480,13 @@ header {
 	margin-top: 30px;
 	background-image: url('images/bottom-banner.png');
 	background-size: cover;
+	background-position: center;
 }
 
 .bottom-banner:hover {
 	opacity: .9;
 	cursor: pointer;
 }
-
-/*collections*/
 
 
 /*footer*/
@@ -583,13 +575,19 @@ footer ul li a:hover {
 
 .footer-wrap {
 	width: 80%;
+	height: 100%;
 	margin: 0 auto;
 	padding-top: 30px;
+	position: relative;
 }
 
 .copyright {
 	font-size: 12px;
 	color: grey;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
 }
 
 .copyright ul li {
@@ -598,15 +596,19 @@ footer ul li a:hover {
 }
 
 .copyright .copyright-left {
-	position: absolute;
+	float: left;
+	padding-bottom: 10px;
+	/*position: absolute;
 	bottom: 0;
-	left: 0;
+	left: 0;*/
 }
 
 .copyright .copyright-right {
-	position: absolute;
+	float: right;
+	padding-bottom: 10px;
+/*	position: absolute;
 	bottom: 0;
-	right: 0;
+	right: 0;*/
 }
 
 
@@ -619,21 +621,20 @@ footer ul li a:hover {
 
 	.nav {
 		width: 100%;
+		top: 0;
+		left: 0;
 	}
 
 	.nav ul.left-nav {
 		text-align: center;
 		margin: 0 auto;
 		float: none;
-		width: 100%;
+		width: 60%;
 	}
 
 	.nav ul.mobile-left-nav {
-		display: inline;
+		display: block;
 		float: left;
-		position: absolute;
-		top: 10px;
-		left: 10px;
 	}
 
 	.nav ul.center-nav {
@@ -645,15 +646,12 @@ footer ul li a:hover {
 	}
 
 	.nav ul.mobile-right-nav {
-		display: inline;
+		display: block;
 		float: right;
-		position: absolute;
-		top: 10px;
-		right: 10px;
 	}
 
 	.nav ul.mobile-right-nav li {
-		display: inline;
+		display: inline-block;
 		margin-right: 15px;
 	}
 
@@ -662,7 +660,8 @@ footer ul li a:hover {
 	}
 
 	.hero-2 {
-		background-size: contain;
+		height: 200px;
+		background-size: cover;
 		background-repeat: no-repeat;
 	}
 	
@@ -689,17 +688,29 @@ footer ul li a:hover {
 		padding: 0;
 	}
 
+	.hero-title-box {
+		top: 40px;
+		font-size: 14px;
+	}
+
 	.hero-title-box h1 {
-		margin-top: 5px;
+		margin-top: 0;
+	}
+
+	.left-hero-text {
+		font-size: 12px;
+	}
+
+	.right-hero-text {
+		font-size: 12px;
 	}
 
 	.hero-2 {
-		margin: 0;
-		padding: 0;
+		margin-top: 20px;
 	}
 
 	.hero-2 a {
-		top: 30%;
+		top: 50%;
 		left: 50%;
 	}
 
@@ -708,45 +719,50 @@ footer ul li a:hover {
 	}
 
 	.womens {
+		margin-top: 20px;
+	}
+
+	.womens .womens-header hr {
 		margin: 0;
-		padding: 0;
 	}
 
 	.womens .col-1 {
 		width: 100%;
-	/*	height: 375px;*/
 		float: none;
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
-		margin: 0;
+		margin-top: 0;
+		margin-bottom: 10px;
 	}
 
 	.womens .col-1 a {
-		top: 20%;
-		left: 30%;
+		top: 50%;
+		left: 50%;
 	}
 
 	.womens .col-2 {
 		width: 100%;
 		float: none;
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
 		padding: 0;
-		margin: 0;
+		margin-bottom: 10px;
+		margin-left: 0;
 	}
 
 	.womens .col-2 a {
-		bottom: 20%;
-		left: 30%;
+		top: 50%;
+		left: 50%;
 	}
 
 	.womens-bottom-banner {
 		width: 100%;
 		height: 500px;
-		margin: 0;
 		padding: 0;
+		margin-top: 0;
+		margin-bottom: 20px;
 		background-image: url('images/womens-bottom-banner-mobile.png');
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
 	}
 
@@ -754,24 +770,29 @@ footer ul li a:hover {
 		margin: 0;
 	}
 
+	.mens .mens-header hr {
+		margin-bottom: 0;
+	}
+
 	.mens .col-1 {
 		width: 100%;
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
 		float: none;
-		margin-bottom: 20px;
 		padding: 0;
-		margin: 0;
+		margin-top: 0;
+		margin-bottom: 10px;
+		margin-left: 0;
 	}
 
 	.mens .col-1 a {
-		top: 30%;
-		left: 30%;
+		top: 50%;
+		left: 50%;
 	}
 
 	.mens .col-2 {
 		width: 100%;
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
 		float: none;
 		margin: 0;
@@ -779,8 +800,8 @@ footer ul li a:hover {
 	}
 
 	.mens .col-2 a {
-		bottom: 20%;
-		left: 30%;
+		bottom: 50%;
+		left: 50%;
 	}
 
 	.bottom-banner {
@@ -791,6 +812,10 @@ footer ul li a:hover {
 		background-image: url('images/bottom-banner-mobile.png');
 		background-size: contain;
 		background-repeat: no-repeat;
+	}
+
+	footer {
+		margin-top: 0;
 	}
 
 	footer li {
@@ -825,6 +850,13 @@ footer ul li a:hover {
 		width: 100%;
 	}
 
+	footer .copyright-left {
+		width: 100%;
+	}
+
+	footer .copyright-right {
+		width: 100%;
+	}
 }
 
 
