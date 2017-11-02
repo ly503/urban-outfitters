@@ -69,7 +69,7 @@ header {
 	height: 50px;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	position: fixed;
+	position: absolute;
 /*	remember:
 	top + left values*/
 	top: 50px;
@@ -105,6 +105,14 @@ header {
 	margin-right: 10px;
 }
 
+.nav ul.center-nav li a {
+	text-decoration: none;
+}
+
+.nav ul.center-nav li a:hover {
+	text-decoration: underline;
+}
+
 .nav ul.right-nav {
 	float: left;
 	width: 20%;
@@ -115,6 +123,24 @@ header {
 .nav ul.right-nav li{
 	display: inline-block;
 	margin-right: 5px;
+}
+
+.nav ul.right-nav li a {	
+	text-decoration: none;
+}
+
+.nav ul.right-nav li a:hover {
+	text-decoration: underline;
+}
+
+.mobile-nav-dropdown {
+	display: none;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	z-index: 15;
+	background-color: lightgrey;
 }
 
 /*sections*/
@@ -201,12 +227,12 @@ header {
 }
 
 .hero-2:hover,
-.hero-2 a:hover {
+.hero-2-button:hover {
 	opacity: .8;
 	cursor: pointer;
 }
 
-.hero-2 a {
+.hero-2-button {
 	width: 120px;
 	height: 30px;
 	background-color: white;
@@ -225,6 +251,11 @@ header {
 .section-3 {
 	margin-top: 30px;
 	position: relative;
+}
+
+.section-3-wrap {
+	width: calc(100% + 15px);
+	margin-left: -7.5px;
 }
 
 .section-3 .col-1,
@@ -263,7 +294,7 @@ header {
 	width: 100%;
 }
 
-.section-3 .section-3-button a {
+.section-3-button {
 	width: 150px;
 	height: 30px;
 	text-align: center;
@@ -278,8 +309,8 @@ header {
 	color: rgba(0, 0, 0, .9);
 }
 
-.section-3 .section-3-button a:hover {
-	opacity: .8;
+.section-3-button:hover {
+	opacity: .9;
 	cursor: pointer;
 }
 
@@ -308,8 +339,9 @@ header {
 }
 
 .womens-column-wrap {
-	width: 100%;
+	width: calc(100% + 15px);
 	position: relative;
+	margin-left: -7.5px;
 }
 
 .womens .womens-column-wrap a {
@@ -344,8 +376,7 @@ header {
 	background-position: center;
 }
 
-.womens .womens-column-wrap .col-1 a,
-.womens .womens-column-wrap .col-2 a {
+.womens-button-wrap{
 	width: 150px;
 	height: 30px;
 	font-size: 14px;
@@ -360,8 +391,7 @@ header {
 	margin-left: -75px;
 }
 
-.womens .womens-column-wrap .col-1 a:hover,
-.womens .womens-column-wrap .col-2 a:hover {
+.womens-button-wrap:hover {
 	opacity: .9;
 	cursor: pointer;
 }
@@ -401,10 +431,17 @@ header {
 	color: grey;
 	margin-bottom: 15px;
 }
-
+/*
 .mens-column-wrap {
 	width: 100%;
 	position: relative;
+}
+*/
+
+.mens-column-wrap {
+	width: calc(100% + 15px);
+	position: relative;
+	margin-left: -7.5px;
 }
 
 .mens-column-wrap a {
@@ -437,8 +474,7 @@ header {
 	cursor: pointer;
 }
 
-.mens .col-1 a,
-.mens .col-2 a {
+.mens-button-wrap {
 	width: 150px;
 	height: 30px;
 	font-size: 14px;
@@ -447,18 +483,13 @@ header {
 	text-align: center;
 	color: rgba(0, 0, 0, .9);
 	line-height: 30px;
-}
-
-.mens .col-1 a,
-.mens .col-2 a {
 	position: absolute;
 	bottom: 20px;
 	left: 50%;
 	margin-left: -75px;
 }
 
-.mens .col-1 a:hover,
-.mens .col-2 a:hover {
+.mens-button-wrap:hover {
 	opacity: 9;
 	cursor: pointer;
 }
@@ -599,6 +630,7 @@ footer ul li a:hover {
 	}
 
 	.nav {
+		position: fixed;
 		width: 100%;
 		top: 0;
 		left: 0;
@@ -702,6 +734,11 @@ footer ul li a:hover {
 		margin-top: 20px;
 	}
 
+	.womens-column-wrap {
+		width: 100%;
+		margin: 0;
+	}
+
 	.womens .womens-header hr {
 		margin: 0;
 	}
@@ -715,8 +752,7 @@ footer ul li a:hover {
 		margin-bottom: 10px;
 	}
 
-	.womens .col-1 a,
-	.womens .col-2 a {
+	.womens-button-wrap {
 		top: 50%;
 		left: 50%;
 	}
@@ -728,7 +764,6 @@ footer ul li a:hover {
 		background-repeat: no-repeat;
 		padding: 0;
 		margin-bottom: 10px;
-		margin-left: 0;
 	}
 
 	.womens-bottom-banner {
@@ -761,7 +796,7 @@ footer ul li a:hover {
 		margin-left: 0;
 	}
 
-	.mens .col-1 a {
+	.mens-button-wrap {
 		top: 50%;
 		left: 50%;
 	}
@@ -775,10 +810,10 @@ footer ul li a:hover {
 		padding: 0;
 	}
 
-	.mens .col-2 a {
+/*	.mens .col-2 a {
 		bottom: 50%;
 		left: 50%;
-	}
+	}*/
 
 	.bottom-banner {
 		width: 100%;
